@@ -2,6 +2,7 @@ package me.yuxiaoyao.retrofit.boot.test.controller;
 
 import me.yuxiaoyao.retrofit.boot.test.retrofit.TestClient;
 import okhttp3.ResponseBody;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,11 +18,8 @@ import java.io.IOException;
 @RestController
 public class MainController {
 
-    private final TestClient testClient;
-
-    public MainController(TestClient testClient) {
-        this.testClient = testClient;
-    }
+    @Autowired
+    private TestClient testClient;
 
 
     @RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST})

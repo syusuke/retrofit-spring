@@ -1,13 +1,12 @@
 package me.yuxiaoyao.retrofit.boot;
 
 import org.springframework.beans.factory.FactoryBean;
-import retrofit2.Retrofit;
 
 /**
  * @author VcKerry on 2020/8/26
  */
 
-public class RetrofitFactoryBean<T> implements FactoryBean<T> {
+public class RetrofitFactoryBean<T> extends RetrofitSupport implements FactoryBean<T> {
 
     private Class<T> retrofitInterface;
 
@@ -17,10 +16,7 @@ public class RetrofitFactoryBean<T> implements FactoryBean<T> {
 
     @Override
     public T getObject() throws Exception {
-        Retrofit.Builder builder = new Retrofit.Builder();
-        builder.baseUrl("http://baidu.com/");
-        Retrofit retrofit = builder.build();
-        return retrofit.create(this.retrofitInterface);
+        return getRetrofit().create(this.retrofitInterface);
     }
 
     @Override
