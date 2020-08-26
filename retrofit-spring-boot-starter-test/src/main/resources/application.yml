@@ -1,0 +1,7 @@
+server:
+  port: 8081
+debug: true
+
+mybatis:
+  logging:
+    level: body
