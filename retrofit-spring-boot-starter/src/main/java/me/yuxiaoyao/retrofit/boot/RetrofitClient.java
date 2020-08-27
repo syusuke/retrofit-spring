@@ -17,4 +17,11 @@ public @interface RetrofitClient {
      * @return
      */
     String value() default "";
+
+    /**
+     * 默认URL
+     *
+     * @return
+     */
+    String baseUrl() default "";
 }

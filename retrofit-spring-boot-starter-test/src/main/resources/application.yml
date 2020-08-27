@@ -2,6 +2,8 @@ server:
   port: 8081
 debug: true
 
-mybatis:
+retrofit:
+  base-url: http://127.0.0.1:${server.port}/
+okhttp:
   logging:
-    level: body
+    level: BODY

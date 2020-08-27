@@ -1,0 +1,83 @@
+{
+  "properties": [
+    {
+      "name": "retrofit.base-url",
+      "type": "java.lang.String",
+      "defaultValue": null,
+      "description": "http request api base url request notnull.",
+      "sourceType": "me.yuxiaoyao.retrofit.boot.RetrofitProperties"
+    },
+    {
+      "name": "okhttp.call-timeout",
+      "type": "java.time.Duration",
+      "sourceType": "me.yuxiaoyao.retrofit.boot.OkhttpProperties",
+      "defaultValue": "0ms",
+      "description": "The call timeout spans the entire call: resolving DNS, connecting, writing the request body, server processing, and reading the response body."
+    },
+    {
+      "name": "okhttp.connect-timeout",
+      "type": "java.time.Duration",
+      "sourceType": "me.yuxiaoyao.retrofit.boot.OkhttpProperties",
+      "defaultValue": "10s",
+      "description": "The connect timeout is applied when connecting a TCP socket to the target host. The default value is 10 seconds."
+    },
+    {
+      "name": "okhttp.read-timeout",
+      "type": "java.time.Duration",
+      "sourceType": "me.yuxiaoyao.retrofit.boot.OkhttpProperties",
+      "defaultValue": "10s",
+      "description": "The read timeout is applied to both the TCP socket and for individual read IO operations including on Source of the Response. The default value is 10 seconds."
+    },
+    {
+      "name": "okhttp.write-timeout",
+      "type": "java.time.Duration",
+      "sourceType": "me.yuxiaoyao.retrofit.boot.OkhttpProperties",
+      "defaultValue": "10s",
+      "description": "The write timeout is applied for individual write IO operations. The default value is 10 seconds."
+    },
+    {
+      "name": "okhttp.logging.level",
+      "type": "java.lang.String",
+      "sourceType": "me.yuxiaoyao.retrofit.boot.OkhttpProperties$OkHttpLogging",
+      "defaultValue": "NONE",
+      "description": "retrofit with okhttp logging interceptor log level."
+    },
+    {
+      "name": "okhttp.pool.max-idle-connections",
+      "type": "java.lang.Integer",
+      "sourceType": "me.yuxiaoyao.retrofit.boot.OkhttpProperties$Pool",
+      "defaultValue": "5",
+      "description": "The maximum number of idle connections for each address."
+    },
+    {
+      "name": "okhttp.pool.keep-alive",
+      "type": "java.time.Duration",
+      "sourceType": "me.yuxiaoyao.retrofit.boot.OkhttpProperties$Pool",
+      "defaultValue": "5m",
+      "description": "The thread keep alive time."
+    }
+  ],
+  "hints": [
+    {
+      "name": "okhttp.logging.level",
+      "values": [
+        {
+          "value": "NONE",
+          "description": "No logs(Default)."
+        },
+        {
+          "value": "BASIC",
+          "description": "Logs request and response lines and their respective headers."
+        },
+        {
+          "value": "HEADERS",
+          "description": "Logs request and response lines and their respective headers."
+        },
+        {
+          "value": "BODY",
+          "description": "Logs request and response lines and their respective headers and bodies (if present)."
+        }
+      ]
+    }
+  ]
+}

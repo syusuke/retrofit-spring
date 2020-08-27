@@ -17,7 +17,7 @@ public interface TestClient {
      *
      * @return
      */
-    @GET("/")
-    Call<ResponseBody> index();
+    @GET("/date")
+    Call<ResponseBody> currentDate();
 
 }
