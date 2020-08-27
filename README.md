@@ -1,5 +1,7 @@
 # Retrofit With Spring
 
+![](https://api.travis-ci.org/syusuke/retrofit-spring.svg)
+
 ## 实现原理
 [参考Mybatis Springboot starter](https://github.com/mybatis/spring-boot-starter)
 
